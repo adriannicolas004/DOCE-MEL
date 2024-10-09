@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br" <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doce Mel</title>
+<link rel="stylesheet" href="style.css" <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('./img/fundo.png');
+            /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            /* Para cobrir toda a área */
+            background-position: center;
+            /* Para centralizar a imagem */
+
+            height: 100vh;
+            /* Para garantir que o body tenha altura total da tela */
+            margin: 0;
+            /* Para remover margens padrão */
+        }
+
+        * {
+            font-family: "Poppins", sans-serif;
+            color: black margin 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*calcular distancias*/
+        }
+
+        .caixa-conteudo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .links {
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5%;
+
+        }
+
+
+        body {
+            padding-top: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .caixa-texto {
+            width: 500px;
+        }
+
+
+        span {
+            color: palevioletred;
+            font-weight: 900;
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .logo {
+            width: 250px;
+            margin-top: -10%;
+        }
+
+
+
+        .copo {
+            width: 350px;
+            justify-content: space-between;
+            margin-top: -120%;
+            margin-left: auto;
+            margin-right: 0;
+            display: block;
+            /* Para que a margem funcione corretamente */
+            position: relative;
+            /* ou absolute, dependendo do seu caso */
+            left: 1200px;
+            /* Move a imagem para a direita */
+            transform: translateX(-100%);
+            /* Ajusta para que a imagem seja totalmente deslocada para a direita */
+
+        }
+
+        .caixa-menu {
+            margin-top: -5%;
+        }
+
+
+
+
+
+        button {
+            background-color: #017143;
+            /*cor do texto*/
+            color: white;
+            /*cor de fundo*/
+            border-radius: 40px;
+            /*arredondameto*/
+            padding: 10px;
+            border: none;
+            /*tirar borda*/
+            cursor: pointer;
+        }
+
+        button :hover {
+            background-color: black;
+
+        }
+
+        .circulo {
+            width: 100%;
+            height: 100%;
+            background: palevioletred;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            clip-path: circle(600px at right 200px);
+            z-index: -1;
+        }
+
+        .rosquinha {
+            margin-top: 30px;
+        }
+
+        .botao-menu {
+            width: 20%;
+            cursor: pointer;
+            margin: 10px;
+            transition: 1s;
+        }
+
+        .botao-menu:hover {
+
+            transform: translateY(-20px);
+        }
+    </style>
+
+   
+
+    </div>
+
+
+    <div class="circulo"></div>
+
+
+
+    <div class="caixa-conteudo">
+
+
+
+
+        <div class="caixa-imagem">
+
+
+
+            <div class="imagem-logo">
+
+
+                <img src="./img/logo.png.png" class="logo" </div>
+
+                <div class="caixa-texto">
+
+                    <h2> <span>Doceria Mel,</span> <br>
+                        Sabores que Acariciam a Alma !
+
+
+                    </h2>
+
+
+                    <p>
+
+                    <p></p>
+                    Bem-vindo à Doceria Mel, onde cada doce é preparado com amor e dedicação! Nos dedicamos a criar
+                    experiências inesquecíveis através de sabor e estética, oferecendo uma variedade de opções que
+                    encantam os olhos e o paladar.
+
+
+
+                    </p>
+
+
+
+                    <button>GOSTOU ? CLIQUE ABAIXO </button> <br> <br> <br>
+
+                    <div class="caixa-menu">
+                        
+
+                        <img src="./img/cupcake.png.png" class="botao-menu"
+                        onclick="trocarACor('#017143');trocarImagem('./img/cupcake.png.png')"   > 
+                            
+                        <img src="./img/bolo(2).png" class="botao-menu" 
+                        onclick="trocarACor('#eb7495');trocarImagem('./img/bolo(2).png')" >
+
+                        <img src="./img/bolo.png.png" class="botao-menu"
+                        onclick="trocarACor('#d752b1');trocarImagem('./img/bolo.png.png')">
+
+                        <img src="./img/bolo(3).png" class="botao-menu"
+                        onclick="trocarACor('#d47f7f');trocarImagem('./img/bolo(3).png')" >
+                        
+                      
+                        
+
+                </div>
+
+                <p class=" links"> <a href="https://web.whatsapp.com/">Fazer pedido</a> /
+                        <a href="https://www.instagram.com/?hl=pt-br">instagram</a> /
+                        <a href="https://pt-br.facebook.com/"> Facebook </a>
+
+
+                        </p>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="imagem-principal">
+
+                    <img src="./img/capa.png" class="copo">
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        
+</body>
+
+<script>
+    let  circulo = document.querySelector('.circulo');
+    let  imagem = document.querySelector('.copo');
+
+    function trocarACor(cor){
+
+        circulo.style.background = cor;
+
+    }
+
+    function trocarImagem(endereco){
+
+        imagem.src = endereco;
+    }
+
+    
+
+
+
+</script>
+
+</html>
